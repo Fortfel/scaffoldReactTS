@@ -1,0 +1,60 @@
+/* https://fontsource.org/ for fonts */
+
+/*@layer theme, base, components, utilities;*/
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base); /* comment this line to disable preflight */
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+/* todo add live templates (shadowcn)*/
+/* todo README*/
+
+/* Custom plugins */
+@import "./plugins/bg-stripes.css";
+@import "./plugins/horizontal-line.css";
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms" {
+  /* only generate global styles */
+  /*strategy: base;*/
+  /* only generate classes */
+  /*strategy: class;*/
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /*--font-monstserrat: 'Montserrat', sans-serif;*/
+  /*--max-width-container: 85rem;*/
+
+  /*--breakpoint-sm: 40rem; !* 640px *!*/
+  /*--breakpoint-md: 48rem; !* 768px *!*/
+  /*--breakpoint-lg: 64rem; !* 1024px *!*/
+  /*--breakpoint-xl: 80rem; !* 1280px *!*/
+  /*--breakpoint-2xl: 96rem; !* 1536px *!*/
+}
+
+@theme {
+  /*--color-primary: rgb(255, 92, 92);*/
+  /*  --color-primary-foreground: rgb(250, 250, 250);*/
+  /*  --color-primary-variant: #ff2d2d;*/
+  /*  --color-secondary: #1b9999;*/
+  /*  --color-background: rgb(255, 255, 255);*/
+  /*  --color-background-foreground: rgb(66, 66, 66);*/
+  /*  --color-background-foreground-alt: rgba(66, 66, 66, 0.7);*/
+  /*  --shadow-main: 0 5px 20px 1px rgba(0, 0, 0, 0.5);*/
+  /*}*/
+
+  /*@layer base {*/
+  /*  @variant dark {*/
+  /*    --color-primary: rgb(150, 65, 255);*/
+  /*    --color-primary-foreground: #000;*/
+  /*    --color-primary-variant: #6c63ff;*/
+  /*    --color-secondary: #03dac5;*/
+  /*    --color-background: #121212;*/
+  /*    --color-background-foreground: rgba(255, 255, 255, 0.9);*/
+  /*    --color-background-foreground-alt: rgba(255, 255, 255, 0.7);*/
+  /*  }*/
+}
+
+/*background-image: repeating-linear-gradient(-45deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%) 1px, hsl(240 10% 3.9%) 1px, hsl(240 10% 3.9%) 8px);*/
+/*background-image: repeating-linear-gradient(-45deg, hsl(0 0% 100%), hsl(240 5.9% 90%) 1px, hsl(0 0% 100%) 1px, hsl(0 0% 100%) 8px);*/
