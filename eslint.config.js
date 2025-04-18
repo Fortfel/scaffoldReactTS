@@ -87,11 +87,11 @@ export default tseslint.config(
           readonly: 'generic',
         },
       ],
-      "@typescript-eslint/no-confusing-void-expression": [
-        "error",
+      '@typescript-eslint/no-confusing-void-expression': [
+        'error',
         {
-          "ignoreArrowShorthand": true
-        }
+          ignoreArrowShorthand: true,
+        },
       ],
       '@typescript-eslint/naming-convention': [
         'error',
