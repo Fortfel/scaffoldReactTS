@@ -1,54 +1,86 @@
-# React + TypeScript + Vite
+# Basic React TypeScript Bootstrap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern starter template for React applications with TypeScript, Tailwind CSS, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ [React 19](https://react.dev/) - The latest version of React
+- 🔥 [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- 🔒 [TypeScript](https://www.typescriptlang.org/) - Type safety for your JavaScript
+- 💨 [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- 📝 [ESLint](https://eslint.org/) - Pluggable JavaScript linter
+- 💖 [Prettier](https://prettier.io/) - Opinionated code formatter
+- 📚 [TypeDoc](https://typedoc.org/) - Documentation generator for TypeScript
+- 🔄 [SWC](https://swc.rs/) - Super-fast JavaScript/TypeScript compiler
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v18 or newer)
+- npm or yarn
+
+### Installation
+
+1. Clone this repository
+
+```bash
+git clone <repository-url>
+cd basic-react-ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# or
+yarn
 ```
+
+3. Start the development server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start the development server with TypeScript type checking
+- `npm run build` - Build for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run docs` - Generate documentation with TypeDoc
+- `npm run watch:docs` - Generate documentation in watch mode
+
+## Project Structure
+
+```
+basic-react-ts/
+├── public/             # Static assets
+├── src/
+│   ├── assets/         # Project assets (images, fonts, etc.)
+│   ├── style/          # CSS and styling files
+│   ├── App.tsx         # Main App component
+│   ├── main.tsx        # Application entry point
+│   └── vite-env.d.ts   # Vite environment type declarations
+├── .env                # Environment variables
+├── .prettierrc         # Prettier configuration
+├── eslint.config.js    # ESLint configuration
+├── tsconfig.json       # TypeScript configuration
+└── vite.config.ts      # Vite configuration
+```
+
+## Documentation
+
+Generate API documentation using TypeDoc:
+
+```bash
+npm run docs
+```
+
+The documentation will be available in the `docs` directory.

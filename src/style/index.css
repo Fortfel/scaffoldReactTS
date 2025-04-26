@@ -3,11 +3,7 @@
 @import 'tailwindcss/preflight.css' layer(base); /* comment this line to disable preflight */
 @import 'tailwindcss/utilities.css' layer(utilities);
 
-/*@import '@fontsource/inter/400.css';*/
-/*@import '@fontsource/inter/600.css';*/
 /*@import '@fontsource/inter/700.css';*/
-
-/* todo README*/
 
 /* Custom plugins */
 @import "./plugins/bg-stripes.css";
