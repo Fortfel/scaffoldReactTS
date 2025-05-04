@@ -64,6 +64,7 @@ basic-react-ts/
 ├── public/             # Static assets
 ├── src/
 │   ├── assets/         # Project assets (images, fonts, etc.)
+│   ├── components/     # React components
 │   ├── style/          # CSS and styling files
 │   ├── App.tsx         # Main App component
 │   ├── main.tsx        # Application entry point

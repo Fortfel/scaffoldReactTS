@@ -1,28 +1,6 @@
-/*@layer theme, base, components, utilities;*/
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/preflight.css' layer(base); /* comment this line to disable preflight */
 @import 'tailwindcss/utilities.css' layer(utilities);
 
-/*@import '@fontsource/inter/700.css';*/
-
-/* Custom plugins */
-@import "./plugins/bg-stripes.css";
-@import "./plugins/horizontal-line.css";
-
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/forms" {
-  /* only generate global styles */
-  /*strategy: base;*/
-  /* only generate classes */
-  /*strategy: class;*/
-}
-
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
-@theme {
-  /*--font-inter: 'Inter', sans-serif;*/
-  /*--max-width-container: 85rem;*/
-}
-
-/*background-image: repeating-linear-gradient(-45deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%) 1px, hsl(240 10% 3.9%) 1px, hsl(240 10% 3.9%) 8px);*/
-/*background-image: repeating-linear-gradient(-45deg, hsl(0 0% 100%), hsl(240 5.9% 90%) 1px, hsl(0 0% 100%) 1px, hsl(0 0% 100%) 8px);*/
+/*@plugin "@tailwindcss/typography";*/
+/*@plugin "@tailwindcss/forms";*/
