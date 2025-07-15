@@ -1,5 +1,5 @@
 {
-  "name": "template_React",
+  "name": "template",
   "private": true,
   "scripts": {
     "build": "turbo run build",
