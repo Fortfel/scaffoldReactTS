@@ -5,20 +5,25 @@
   "private": true,
   "exports": {
     "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./react-internal": "./react-internal.js"
+    "./node": "./node.js",
+    "./web": "./web.js",
+    "./react": "./react.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.0",
-    "@next/eslint-plugin-next": "^15.3.0",
     "eslint": "^9.30.0",
     "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-compiler": "19.1.0-rc.2",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-tsdoc": "^0.4.0",
     "eslint-plugin-turbo": "^2.5.0",
+    "eslint-plugin-unicorn": "^59.0.1",
     "globals": "^16.3.0",
-    "typescript": "^5.8.2",
+    "typescript": "catalog:",
     "typescript-eslint": "^8.35.0"
   }
 }
