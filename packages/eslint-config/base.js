@@ -5,6 +5,7 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import eslintPluginTsdoc from 'eslint-plugin-tsdoc'
 import turboPlugin from 'eslint-plugin-turbo'
 import tseslint from 'typescript-eslint'
+import { globalIgnores } from 'eslint/config'
 
 /**
  * A shared ESLint configuration for the repository.
@@ -12,16 +13,39 @@ import tseslint from 'typescript-eslint'
  * @type {import("eslint").Linter.Config[]}
  * */
 export const config = [
+  // Global ignores
+  globalIgnores(['dist']),
+
+  // Base configs for all files
   js.configs.recommended,
   eslintConfigPrettier,
   eslintPluginImport.flatConfigs.recommended,
   eslintPluginUnicorn.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
+
+  // JavaScript files - NO type-aware rules
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    files: ['**/*.{js,mjs,cjs}'],
+    plugins: {
+      turbo: turboPlugin,
+    },
+    rules: {
+      'turbo/no-undeclared-env-vars': 'warn',
+      quotes: ['error', 'single'],
+      semi: ['error', 'never'],
+      'no-unused-vars': ['error', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }],
+    },
+  },
+
+  // TypeScript files - WITH type-aware rules
+  ...tseslint.configs.strictTypeChecked.map((config) => ({
+    ...config,
+    files: ['**/*.{ts,tsx}'],
+  })),
+  {
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        projectService: true, // Only for TypeScript files
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -44,7 +68,6 @@ export const config = [
             'Use const assertion or a string union type instead. https://mkosir.github.io/typescript-style-guide/#enums--const-assertion',
         },
       ],
-      'import/no-default-export': 'error',
       'no-unused-vars': 'off',
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
       '@typescript-eslint/ban-ts-comment': [
@@ -94,9 +117,6 @@ export const config = [
       ],
       'tsdoc/syntax': 'warn',
     },
-  },
-  {
-    ignores: ['dist/**'],
   },
   {
     // Override for specific files

@@ -14,7 +14,7 @@ import { config as baseConfig } from './base.js'
 export const config = [
   ...baseConfig,
   eslintPluginJsxA11y.flatConfigs.recommended,
-  pluginReactRefresh.configs.recommended,
+  pluginReactRefresh.configs.vite,
   pluginReactHooks.configs['recommended-latest'],
   pluginReact.configs.flat.recommended, // This is not a plugin object, but a shareable config object
   pluginReact.configs.flat['jsx-runtime'], // Add this if you are using React 17+
