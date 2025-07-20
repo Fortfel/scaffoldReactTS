@@ -22,6 +22,13 @@ export const config = [
   eslintPluginImport.flatConfigs.recommended,
   eslintPluginUnicorn.configs.recommended,
 
+  // Global rule overrides
+  {
+    rules: {
+      'unicorn/prevent-abbreviations': 'off',
+    },
+  },
+
   // JavaScript files - NO type-aware rules
   {
     files: ['**/*.{js,mjs,cjs}'],
