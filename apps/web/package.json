@@ -19,9 +19,16 @@
     "@repo/typescript-config": "workspace:*",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-legacy": "^7.0.1",
     "@vitejs/plugin-react-swc": "^3.10.2",
+    "browser-sync": "^3.0.4",
     "eslint": "catalog:",
     "typescript": "catalog:",
-    "vite": "^7.0.4"
-  }
+    "vite": "^7.0.4",
+    "vite-plugin-browser-sync": "^4.0.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
