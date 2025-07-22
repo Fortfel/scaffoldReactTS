@@ -4,7 +4,7 @@ import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y'
 import { config as baseConfig } from './base.js'
 
 /**
- * A custom ESLint configuration for web applications.
+ * A custom ESLint configuration for web applications without React.
  *
  * @type {import("eslint").Linter.Config[]} */
 export const config = [
