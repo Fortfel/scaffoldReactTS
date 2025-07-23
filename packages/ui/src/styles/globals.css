@@ -4,6 +4,10 @@
 
 @import 'tw-animate-css';
 
+@import './plugins/animations.css';
+@import './plugins/bg-stripes.css';
+@import './plugins/horizontal-line.css';
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

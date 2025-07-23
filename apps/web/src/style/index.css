@@ -1,0 +1,22 @@
+@import '../../../../packages/ui/src/styles/globals.css';
+
+@source "../../../../packages/ui/src/**/*.{ts,tsx}";
+
+/*@import '@fontsource/inter/700.css';*/
+
+/*@plugin "@tailwindcss/typography";*/
+/*@plugin "@tailwindcss/forms" {*/
+/*  !* only generate global styles *!*/
+/*  !*strategy: base;*!*/
+/*  !* only generate classes *!*/
+/*  !*strategy: class;*!*/
+/*}*/
+
+@theme {
+  /*--font-inter: 'Inter', sans-serif;*/
+  /*--max-width-container: 85rem;*/
+}
+
+/*background-image: repeating-linear-gradient(-45deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%) 1px, hsl(240 10% 3.9%) 1px, hsl(240 10% 3.9%) 8px);*/
+/*background-image: repeating-linear-gradient(-45deg, hsl(0 0% 100%), hsl(240 5.9% 90%) 1px, hsl(0 0% 100%) 1px, hsl(0 0% 100%) 8px);*/
+/*grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));*/
