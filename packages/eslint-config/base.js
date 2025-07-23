@@ -26,6 +26,7 @@ export const config = [
   {
     rules: {
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/prefer-query-selector': 'off',
     },
   },
 
@@ -66,6 +67,16 @@ export const config = [
       quotes: ['error', 'single'],
       semi: ['error', 'never'],
 
+      'unicorn/filename-case': [
+        'error',
+        {
+          cases: {
+            kebabCase: true,
+            pascalCase: true,
+          },
+        },
+      ],
+
       'no-restricted-syntax': [
         'error',
         // Ban all enums:
@@ -89,8 +100,8 @@ export const config = [
       '@typescript-eslint/array-type': [
         'error',
         {
-          default: 'generic',
-          readonly: 'generic',
+          default: 'array',
+          readonly: 'array',
         },
       ],
       '@typescript-eslint/no-confusing-void-expression': [
