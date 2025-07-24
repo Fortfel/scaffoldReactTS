@@ -1,0 +1,9 @@
+{
+  "entryPoints": ["apps/*", "packages/*"],
+  "name": "Documentation",
+  "entryPointStrategy": "packages",
+  "exclude": ["**/*.test.ts", "**/*.spec.ts"],
+  "out": "docs",
+
+  "logLevel": "Verbose"
+}
